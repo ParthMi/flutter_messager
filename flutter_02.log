@@ -1,0 +1,81 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+_CastError: Null check operator used on a null value
+
+```
+#0      HotRunner._resetDirtyAssets (package:flutter_tools/src/run_hot.dart:497:20)
+#1      HotRunner._restartFromSources (package:flutter_tools/src/run_hot.dart:565:5)
+<asynchronous suspension>
+#2      HotRunner._fullRestartHelper (package:flutter_tools/src/run_hot.dart:754:16)
+<asynchronous suspension>
+#3      HotRunner.restart (package:flutter_tools/src/run_hot.dart:694:38)
+<asynchronous suspension>
+#4      TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1699:40)
+<asynchronous suspension>
+#5      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1739:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.4, on Microsoft Windows [Version 6.3.9600],
+    locale en-US)
+    • Flutter version 3.3.4 on channel stable at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision eb6d86ee27 (3 months ago), 2022-10-04 22:31:45 -0700
+    • Engine revision c08d7d5efc
+    • Dart version 2.18.2
+    • DevTools version 2.15.0
+
+[!] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at C:\Users\hp\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for
+      more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2022 17.4.1)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.4.33110.190
+    • Windows 10 SDK version 10.0.22000.0
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from
+      https://developer.android.com/studio/index.html
+      (or visit
+      https://flutter.dev/docs/get-started/install/windows#android-setup for
+      detailed instructions).
+
+[✓] VS Code (version 1.74.2)
+    • VS Code at C:\Users\hp\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.56.0
+
+[✓] Connected device (4 available)
+    • Redmi Note 9 Pro (mobile) • 3915056b • android-arm64  • Android 11 (API
+      30)
+    • Windows (desktop)         • windows  • windows-x64    • Microsoft Windows
+      [Version 6.3.9600]
+    • Chrome (web)              • chrome   • web-javascript • Google Chrome
+      108.0.5359.125
+    • Edge (web)                • edge     • web-javascript • Microsoft Edge
+      108.0.1462.54
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 2 categories.
+```
