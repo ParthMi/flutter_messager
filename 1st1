@@ -1,0 +1,19 @@
+domains
+x,y=symbol
+predicates hate(x,y)
+clauses
+hate(a,b).
+hate(c,d).
+hate(b,c).
+hate(a,c):-hate(a,b),hate(b,c)
+
+
+domains
+x,y=symbol
+predicates
+father(x,y)
+grandfather(x,y)
+clauses
+father(a,b).
+father(b,c).
+grandfather(a,c):-father(a,c),father(b,c)
