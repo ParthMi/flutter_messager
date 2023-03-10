@@ -1,0 +1,46 @@
+#Linear Regression establishes a relationship between a Dependent variable i.e. Y and one or more Independent variables i.e X, using a best fit straight line known as Regression Line.
+#The equation of this regresiion line can then be used to predict value of 'Y' for any given 'X'.
+#  Y = mX + c   ,where m= slope of straight line c= Y-intercept
+setwd("~/Desktop/")
+require("datasets") # https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
+data("iris") 
+str(iris)
+head(iris)
+model<-lm(Sepal.Width~.,iris)
+model
+abline(model, col="blue", lwd=3)
+Y<- iris[,"Sepal.Width"] # select Target attribute
+X<- iris[,"Sepal.Length"] # select Predictor attribute
+head(X)
+head(Y)
+plot(Y~X, col=X)
+#Regression between "Sepal.Length" and "Sepal.Width" .
+model1<- lm(Y~X)
+model1
+plot(Y~X, col=X) # scatter plot between X and Y
+abline(model1, col="blue", lwd=3) # add regression line to scatter plot to see relationship between X and Y
+#Regression between "Petal.Length" and "Petal.Width"
+
+U<- iris[,"Petal.Width"] # select Target
+V<- iris[,"Petal.Length"] # select Predictor
+plot(U~V, col=V)
+model2<- lm(U~V)
+plot(U~V, col=V) # scatter plot between U and V
+abline(model2, col="blue", lwd=3) # add regression line to scatter plot to see relationship between U and V
+
+
+# Prediction of 'Sepal.Width' when 'Sepal.Length'= 20
+p1<- predict(model1,data.frame("X"=20))
+print(p1)
+p2<- predict(model2,data.frame("V"=15))
+p2
+
+carSpeeds <- read.csv(file = 'C:/Users/DKS/Desktop/NEW.csv')
+print(carSpeeds)
+y = mx+c
+x= 10, 20, 30
+
+y= 15, 25, 35
+
+y = x+5
+
