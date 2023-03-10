@@ -1,0 +1,10 @@
+df <- income.csv(file = 'C:/Users/DKS/Desktop/income.csv')
+print(df)
+abline(model, col="blue", lwd=3)
+Y<- df[,"CensusHouseholds"] # select Dependent Variable (Target attribute)
+X<- df[,"Good.CensusHouseholds"] # select Independent VariablePredictor attribute
+head(X)
+head(Y)
+plot(Y~X, col=X)
+model1<- lm(Y~X)
+model1
