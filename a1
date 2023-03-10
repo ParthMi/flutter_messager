@@ -1,0 +1,54 @@
+#Variables
+x=15
+y="IT"
+z<-TRUE
+class(z)
+#Vector : c means "combine"
+v=c(10, 15, 50, 100)
+class(v)
+v1=c(10L, 15L, 50L, 100L)
+class(v1)
+v2=c(1.5, 2.55, 3.5)
+class(v2)
+v3=c("test", FALSE, 5L, 50.5)
+class(c("test", FALSE, 5L, 50.5))
+print(v3[3])
+x <- 1:4
+y <- 6:9
+z <- x + y
+z
+
+
+#Matrix
+m=matrix(c(1:25),5,5)
+
+#Array
+a=array(v, dim=c(2,2,2,3))
+a=array(v, dim=c(2,2))
+
+#list
+
+list= list(c(1,3,4))
+l=list(v, v1, v2)
+
+#DATAFRAME
+
+id=c(1,2,3,4,5)
+name=c("parul","mohan","shyam","baroda","ramayan")
+
+data.frame(id,name)
+
+data.frame(airquality) #Available Dataframe
+
+# Airthmetic 
+
+print(x^5)
+print(22/7)
+print(22%%7)
+print(22%/%7)
+
+print(x>110)
+t1<-10
+20->t2
+print(t2)
+
